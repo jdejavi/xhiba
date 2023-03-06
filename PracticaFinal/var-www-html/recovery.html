@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Xhiba</title>
+  <link rel="stylesheet" href="/public/css/recovery.css">
+</head>
+
+<body>
+  <div class="recovery">
+	<img class="shiba_logo" src="/public/images/Shiba.png">
+	<h1>Recuperacion de contraseña</h1>
+    <form action="/cgi-bin/recovery.cgi" method="post">
+    	<input type="usuario" name="user" placeholder="Introduce el usuario" required="required" />
+        <input type="email" name="mail" placeholder="Introduce el email" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Recover</button>
+    </form>
+</div>
+</body>
+</html>

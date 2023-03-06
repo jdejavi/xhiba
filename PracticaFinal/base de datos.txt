@@ -1,0 +1,32 @@
+CREATE TABLE users(
+    id INT(11) NOT NULL PRIMARY KEY,
+    username VARCHAR(60) NOT NULL,
+    email VARCHAR(60) NOT NULL,
+    password VARCHAR(60) NOT NULL,
+    register INT(1) NOT NULL,
+    name VARCHAR(60) NOT NULL,
+    surname VARCHAR(60) NOT NULL,  
+    service_email INT(1) NOT NULL,
+    service_blog INT(1) NOT NULL,
+    service_web INT(1) NOT NULL,
+    domain VARCHAR(100)
+);
+
+
+ALTER TABLE users
+    MODIFY id INT(11) NOT NULL AUTO_INCREMENT , AUTO_INCREMENT = 1;
+    
+CREATE TABLE domains(
+    id INT(11) NOT NULL PRIMARY KEY,
+    domain VARCHAR(100) NOT NULL,
+    user VARCHAR(60) NOT NULL,
+    user_id INT(11) NOT NULL,
+    status INT(1) NOT NULL
+
+);
+
+
+ALTER TABLE domains
+    MODIFY id INT(11) NOT NULL AUTO_INCREMENT , AUTO_INCREMENT = 1;
+    
+    

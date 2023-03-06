@@ -1,0 +1,11 @@
+dd if=/var/zero of=/var/tamanio_usu.ext2 bs=80M count=1
+dd if=/var/zero of=/var/tamanio_publ.ext2 bs=5M count=1
+mkfs.ext2 /var/tamanio_usu.ext2
+mkfs.ext2 /var/tamanio_publ.ext2
+
+#Con esto crear los ficheros con las instrucciones para particionar
+#luego el script
+
+mount -o loop,rw,usrquota,grpquota -t ext2 /var/tamanio_usu.ext2 /home/usuario
+mount -o loop,rw,usrquota,grpquota -t ext2 /var/tamanio_publ.ext2 /home/usuario
+
